@@ -1,0 +1,1125 @@
+/* ==========================================
+   Jieun Ok | Composer
+   Version 1.0
+========================================== */
+
+:root{
+
+    --bg:#FCF6F5;
+
+    --accent:#7B9ACC;
+
+    --text:#44413D;
+
+    --border:#DDD4D2;
+
+    --hover:#6887B5;
+
+}
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    font-family:"Instrument Serif", serif;
+
+    max-width:1100px;
+
+    margin:auto;
+
+    padding:45px 60px 120px;
+
+}
+
+/* ==========================
+Navigation
+========================== */
+
+nav{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:140px;
+
+}
+
+.logo{
+
+    font-family:"Imbue", serif;
+
+    font-size:44px;
+
+    font-weight:500;
+
+    color:var(--accent);
+
+    text-decoration:none;
+
+}
+
+nav ul{
+
+    display:flex;
+
+    list-style:none;
+
+    gap:42px;
+
+    align-items:center;
+
+}
+
+nav ul li{
+
+    position:relative;
+
+}
+
+nav ul a{
+
+    text-decoration:none;
+
+    color:var(--text);
+
+    font-size:24px;
+
+    transition:.25s;
+
+}
+
+nav ul a:hover{
+
+    color:var(--hover);
+
+}
+
+/* ==========================
+Dropdown
+========================== */
+
+.dropdown-menu{
+
+    position:absolute;
+
+    top:38px;
+
+    left:-8px;
+
+    list-style:none;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transform:translateY(10px);
+
+    transition:.25s ease;
+
+}
+
+.dropdown-menu li{
+
+    width:100%;
+
+}
+
+.dropdown-menu a{
+
+    display:block;
+
+    padding:8px 0;
+
+    font-size:20px;
+
+    color:#666;
+
+}
+
+.dropdown-menu a:hover{
+
+    background:none;
+
+    color:var(--accent);
+
+}
+
+.dropdown:hover .dropdown-menu{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:translateY(0);
+
+}
+
+/* ==========================
+Hero
+========================== */
+
+.hero{
+
+    min-height:72vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+}
+
+.composer-label{
+
+    font-style:italic;
+
+    font-size:30px;
+
+    color:#7b7b7b;
+
+    margin-bottom:8px;
+
+}
+
+h1{
+
+    font-family:"Imbue", serif;
+
+    font-size:135px;
+
+    font-weight:500;
+
+    color:var(--accent);
+
+    line-height:.9;
+
+    margin-bottom:40px;
+
+}
+
+.hero-text{
+
+    font-size:34px;
+
+    max-width:600px;
+
+    line-height:1.6;
+
+}
+
+/* ==========================
+Sections
+========================== */
+
+section{
+
+    margin-top:180px;
+
+}
+
+h2{
+
+    font-family:"Imbue", serif;
+
+    font-size:60px;
+
+    color:var(--accent);
+
+    font-weight:300;
+
+    margin-bottom:35px;
+
+}
+
+p{
+
+    font-size:22px;
+
+    line-height:1.8;
+
+}
+
+/* ==========================
+Horizontal Line
+========================== */
+
+section::before{
+
+    content:"";
+
+    display:block;
+
+    width:100%;
+
+    height:1px;
+
+    background:var(--border);
+
+    margin-bottom:50px;
+
+}
+
+/* Hero에는 선 없음 */
+
+.hero::before{
+
+    display:none;
+
+}
+
+/* ==========================
+Selection Color
+========================== */
+
+::selection{
+
+    background:var(--accent);
+
+    color:white;
+
+}
+
+/* ==========================
+Responsive
+========================== */
+
+@media (max-width:900px){
+
+body{
+
+padding:30px;
+
+}
+
+nav{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+gap:30px;
+
+margin-bottom:90px;
+
+}
+
+nav ul{
+
+flex-wrap:wrap;
+
+gap:24px;
+
+}
+
+.logo{
+
+font-size:38px;
+
+}
+
+h1{
+
+font-size:82px;
+
+}
+
+.hero{
+
+min-height:55vh;
+
+}
+
+.hero-text{
+
+font-size:25px;
+
+}
+
+h2{
+
+font-size:48px;
+
+}
+
+p{
+
+font-size:22px;
+
+}
+
+}
+/* ==========================
+Contact
+========================== */
+
+.contact-links{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:22px;
+
+    margin-top:30px;
+
+}
+
+.contact-links a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    text-decoration:none;
+
+    color:var(--text);
+
+    font-size:28px;
+
+    transition:.25s;
+
+}
+
+.contact-links a:hover{
+
+    color:var(--accent);
+
+}
+
+.contact-links i{
+
+    width:28px;
+
+    color:var(--accent);
+
+    font-size:24px;
+
+}
+.contact-intro{
+
+    font-size:24px;
+
+    color:#777;
+
+    margin-bottom:35px;
+
+    line-height:1.6;
+
+    max-width:520px;
+
+}
+/* ======================================
+Works
+====================================== */
+
+.works-page{
+
+    margin-top:80px;
+
+}
+
+.work-item{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:45px 0;
+
+    border-top:1px solid var(--border);
+
+}
+
+.work-info{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+}
+
+.work-title{
+
+    font-family:"Imbue",serif;
+
+    font-size:60px;
+
+    font-weight:500;
+
+    color:var(--text);
+
+    text-decoration:none;
+
+    transition:.25s;
+
+}
+.work-card:hover .work-text{
+
+    transform:translateX(6px);
+
+}
+
+.work-title span{
+
+    font-family:"Instrument Serif",serif;
+
+    font-size:34px;
+
+    color:#888;
+
+}
+
+.work-title:hover{
+
+    color:var(--accent);
+
+}
+
+.work-info p{
+
+    font-size:22px;
+
+    color:#777;
+
+}
+
+.preview-placeholder{
+
+    width:180px;
+
+    aspect-ratio:8.5 / 11;
+
+    background-image:url("../images/needle-drop-preview.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    border-radius:4px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.12);
+
+    opacity:0;
+
+    transform:translateX(25px) scale(.96);
+
+    transition:.35s ease;
+
+}
+
+.work-item:hover .preview-placeholder{
+
+    opacity:1;
+
+    transform:translateX(0) scale(1);
+
+}
+/* ==========================================
+   Works Gallery
+========================================== */
+
+.gallery{
+
+    margin-top:80px;
+
+}
+
+.work-card{
+
+    border-top:1px solid var(--border);
+
+    padding:70px 0;
+
+    transition:.35s ease;
+
+}
+
+.work-link{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    text-decoration:none;
+
+}
+
+.work-text{
+
+    width:100%;
+
+    transition:.35s ease;
+
+}
+
+.work-text h2{
+
+    font-family:"Imbue", serif;
+
+    font-size:58px;
+
+    font-weight:500;
+
+    color:var(--text);
+
+    margin-bottom:12px;
+
+    transition:.3s;
+
+    white-space:nowrap;
+
+    position:relative;
+
+    display:inline-block;
+
+}
+.work-text h2::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-6px;
+
+    width:0;
+
+    height:2px;
+
+    background:var(--accent);
+
+    transition:.35s ease;
+
+}
+
+.work-text h2 span{
+
+    font-family:"Instrument Serif", serif;
+
+    font-size:32px;
+
+    color:#8b8b8b;
+
+    font-weight:400;
+
+}
+
+.work-text p{
+
+    font-size:22px;
+
+    color:#777;
+
+}
+
+/* 화살표 */
+
+.work-text h2::after{
+
+    content:"↗";
+
+    font-family:sans-serif;
+
+    font-size:28px;
+
+    margin-left:18px;
+
+    opacity:0;
+
+    transform:translateX(-10px);
+
+    display:inline-block;
+
+    transition:.3s;
+
+}
+
+/* Hover */
+.work-card:hover{
+
+    transform:translateY(-4px);
+
+}
+.work-card:hover h2{
+
+    color:var(--accent);
+
+}
+.work-card:hover h2::before{
+
+    width:100%;
+
+}
+
+.work-card:hover h2::after{
+
+    opacity:1;
+
+    transform:translateX(0);
+
+}
+
+/* ==========================
+   Score Preview
+========================== */
+
+.preview{
+
+    position:absolute;
+
+    right:0;
+
+    top:58px;
+
+    width:175px;
+
+    opacity:0;
+
+    transform:
+
+        translateY(18px)
+
+        rotate(2deg)
+
+        scale(.95);
+
+    transition:.45s cubic-bezier(.22,1,.36,1);
+
+    pointer-events:none;
+
+}
+
+.preview img{
+
+    width:100%;
+
+    display:block;
+
+    border-radius:3px;
+
+    box-shadow:
+
+        0 22px 50px rgba(0,0,0,.16);
+
+}
+
+.work-card:hover .preview{
+
+    opacity:1;
+
+    transform:
+
+        translateY(0)
+
+        rotate(0deg)
+
+        scale(1);
+
+}
+.work-card:hover .preview img{
+
+    opacity:1;
+
+    box-shadow:0 26px 55px rgba(0,0,0,.20);
+
+}
+
+/* ==========================
+   Mobile
+========================== */
+
+@media (max-width:900px){
+
+.work-link{
+
+    display:block;
+
+    position:relative;
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+.preview{
+
+    margin-top:35px;
+
+    opacity:1;
+
+    transform:none;
+
+    width:170px;
+
+}
+
+.work-text h2{
+
+    font-size:42px;
+
+}
+
+.work-text p{
+
+    font-size:20px;
+
+}
+
+}
+/* ==========================================
+Piece Page
+========================================== */
+
+.piece-page{
+
+    max-width:900px;
+
+    margin:auto;
+
+    padding-top:60px;
+
+}
+
+.back-link{
+
+    text-decoration:none;
+
+    color:#888;
+
+    font-size:20px;
+
+    transition:.25s;
+
+}
+
+.back-link:hover{
+
+    color:var(--accent);
+
+}
+
+.piece-page h1{
+
+    margin-top:35px;
+
+}
+
+.piece-page h1 span{
+
+    font-family:"Instrument Serif", serif;
+
+    font-size:42px;
+
+    color:#888;
+
+    font-weight:400;
+
+}
+
+.piece-subtitle{
+
+    margin-top:20px;
+
+    color:#777;
+
+    font-size:26px;
+
+}
+
+.piece-section{
+
+    margin-top:90px;
+
+}
+
+.video-wrapper{
+
+    width:100%;
+    aspect-ratio:16/9;
+
+    border-radius:8px;
+
+    overflow:hidden;
+
+    box-shadow:0 18px 45px rgba(0,0,0,.12);
+
+    margin-top:25px;
+
+}
+
+.video-wrapper iframe{
+
+    width:100%;
+    height:100%;
+    border:none;
+
+}
+
+.performance-credit{
+
+    margin-top:30px;
+
+    font-size:20px;
+
+    color:#666;
+
+    line-height:1.8;
+
+}
+
+.performance-credit strong{
+
+    color:var(--text);
+
+    font-weight:normal;
+
+}
+
+.performance-credit em{
+
+    color:#888;
+
+    font-style:italic;
+
+}
+/* ==========================================
+Performance
+========================================== */
+
+.video-wrapper{
+
+    width:100%;
+
+    aspect-ratio:16/9;
+
+    border-radius:8px;
+
+    overflow:hidden;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.12);
+
+    margin-top:28px;
+
+    margin-bottom:36px;
+
+}
+
+.video-wrapper iframe{
+
+    width:100%;
+    height:100%;
+    border:none;
+
+}
+
+.performance-credit{
+
+    color:#666;
+
+}
+
+.performance-credit p{
+
+    margin-bottom:24px;
+
+    font-size:22px;
+
+}
+
+.performance-credit strong{
+
+    color:var(--text);
+
+    font-weight:normal;
+
+}
+
+.performance-note{
+
+    color:#888;
+
+    font-size:20px;
+
+    line-height:1.8;
+
+}
+/* ==========================================
+Program Note
+========================================== */
+
+.program-note{
+
+    max-width:760px;
+
+}
+
+.program-note p{
+
+    margin-bottom:30px;
+
+    font-size:23px;
+
+    line-height:1.95;
+
+    color:var(--text);
+
+}
+
+.program-note em{
+
+    font-style:italic;
+
+}
+.instrumentation{
+
+    color:#8a8a8a;
+
+    font-size:0.9em;
+
+}
+/* ==========================================
+SoundCloud
+========================================== */
+
+.soundcloud-player{
+
+    margin-top:28px;
+
+    border-radius:8px;
+
+    overflow:hidden;
+
+    box-shadow:0 18px 45px rgba(0,0,0,.12);
+
+}
+/* ==========================================
+Archive
+========================================== */
+
+.archive-year{
+
+    margin-top:90px;
+
+}
+
+.archive-event{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    padding:55px 0;
+
+    border-top:1px solid var(--border);
+
+}
+
+.archive-info{
+
+    max-width:600px;
+
+}
+
+.archive-info h3{
+
+    font-family:"Imbue",serif;
+
+    font-size:48px;
+
+    font-weight:500;
+
+    margin-bottom:16px;
+
+}
+
+.archive-info p{
+
+    margin-bottom:20px;
+
+}
+
+.archive-info a{
+
+    color:var(--accent);
+
+    text-decoration:none;
+
+}
+
+.archive-info a:hover{
+
+    text-decoration:underline;
+
+}
+
+.archive-poster{
+
+    width:180px;
+
+    flex-shrink:0;
+
+    overflow:hidden;
+
+}
+.archive-poster img{
+
+    width:100%;
+
+    height:auto;
+
+    display:block;
+
+    border-radius:4px;
+
+    box-shadow:0 14px 35px rgba(0,0,0,.12);
+
+    transition:.3s ease;
+
+}
+
+.archive-poster:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 18px 40px rgba(0,0,0,.12);
+
+}
+.archive-poster:hover img{
+
+    transform:translateY(-6px) scale(1.03);
+
+    box-shadow:0 24px 45px rgba(0,0,0,.18);
+
+}
